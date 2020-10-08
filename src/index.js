@@ -1,4 +1,15 @@
 import './Style/Style.scss';
+import { header } from './Components/Header';
+import { main } from './Components/Main';
+import { footer } from './Components/Footer';
+
+const AppConstructor = (() => {
+	const App = document.getElementById('App');
+
+	App.append(header);
+	App.append(main);
+	App.append(footer);
+})();
 
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
 window.onscroll = () => {
