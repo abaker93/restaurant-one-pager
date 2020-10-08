@@ -1,0 +1,98 @@
+@mixin arboria-book {
+	font-family: arboria, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin arboria-book-italic {
+	font-family: arboria, sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+@mixin arboria-bold {
+	font-family: arboria, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@mixin arboria-bold-italic {
+	font-family: arboria, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+}
+
+@mixin p22-pooper-black-pro {
+	font-family: p22-pooper-black-pro, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin span-regular {
+	font-family: span, serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin span-regular-italic {
+	font-family: span, serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+@mixin span-bold {
+	font-family: span, serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@mixin span-bold-italic {
+	font-family: span, serif;
+	font-weight: 700;
+	font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 { @include p22-pooper-black-pro; }
+
+h1 { font-size: 100px; }
+
+h2 {
+	font-size: 80px;
+	color: $yellow;
+}
+
+h3 {
+	@include arboria-bold;
+	text-transform: uppercase;
+	font-size: 22px;
+	letter-spacing: 0.1em;
+	position: relative;
+	margin-bottom: 70px;
+
+	&:after {
+		content: '';
+		position: absolute;
+		height: 4px;
+		width: 25px;
+		bottom: -38px;
+		left: 0;
+		background-color: rgba(85,85,85,0.1);
+	}
+
+}
+
+h4 {
+	@include arboria-bold;
+	text-transform: uppercase;
+	font-size: 15px;
+	letter-spacing: 0.1em;
+	padding-top: 25px;
+	padding-bottom: 10px;
+}
+
+p {
+	color: $gray2;
+	margin-bottom: 30px;
+}
+
+.strong { font-weight: 700; }

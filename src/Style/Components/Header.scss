@@ -1,0 +1,69 @@
+header#header {
+    background-image: url('../img/hero-header.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: $white;
+    height: 100vh;
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: 15px;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-image: url('../img/border-bottom.png');
+        background-repeat: repeat-x;
+        background-size: 12px 15px;
+        z-index: 10;
+    }
+
+    nav {
+        @include arboria-book;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.70) 20%, rgba(0,0,0,0.25) 50%, rgba(0, 0, 0, 0) 100%);
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        text-transform: uppercase;
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo {
+            height: 50px;
+            fill: $white;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            
+            li {
+                border-top: 5px solid transparent;
+                padding: 30px;
+                
+                &.active { border-top-color: $yellow; }
+            
+            }
+            
+        }
+    
+    }
+
+    .hero-title {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+
+    }
+
+}

@@ -1,0 +1,68 @@
+@import 'Base/_BaseIndex';
+@import 'Components/ComponentsIndex';
+
+body {
+	@include span-regular;
+	font-size: 15px;
+	line-height: 1.4;
+	color: $gray3;
+
+	.container {
+		width: 60%;
+		max-width: 1500px;
+		margin: 0 auto;
+	}
+
+	img { max-width: 100%;}
+
+	.subheader {
+		@include arboria-bold;
+		text-transform: uppercase;
+		font-size: 20px;
+		background-color: $black;
+		margin: 0 auto;
+		padding: 6px 13px 9px;
+		border-radius: 3px;
+		transform: rotate(-3deg);
+		box-shadow: 0 0 0 5px rgba(0,0,0,0.25);
+		color: $white;
+		display: inline-block;
+	}
+
+	button {
+		@include arboria-bold;
+		border: none;
+		background: none;
+		text-transform: uppercase;
+		font-size: 15px;
+		padding: 15px 25px 18px;
+		margin-right: 20px;
+		border-radius: 3px;
+
+		&.btn-light {
+			background-color: $gray1;
+			color: $gray4;
+
+			&:hover, &:focus {
+				background-color: $gray4;
+				color: $gray1;
+				transition: all ease-in-out 0.2s;
+			}
+
+		}
+
+		&.btn-dark {
+			background-color: $gray4;
+			color: $gray1;
+
+			&:hover, &:focus {
+				background-color: $gray1;
+				color: $gray4;
+				transition: all ease-in-out 0.2s;
+			}
+
+		}
+
+	}
+
+}
