@@ -30,17 +30,17 @@ recipes.innerHTML =
 	`<h3>Latest Recipes</h3>
 	<ul>
 		<li>
-			<img src="../src/img/footer.jpg" />
+			<img src="footer.jpg" />
 			<h4>Fancy Pizza 1</h4>
 			<p>Lorem ipsum dolor sit amet</p>
 		</li>
 		<li>
-			<img src="../src/img/footer.jpg" />
+			<img src="footer.jpg" />
 			<h4>Fancy Pizza 2</h4>
 			<p>Lorem ipsum dolor sit amet</p>
 		</li>
 		<li>
-			<img src="../src/img/footer.jpg" />
+			<img src="footer.jpg" />
 			<h4>Fancy Pizza 3</h4>
 			<p>Lorem ipsum dolor sit amet</p>
 		</li>

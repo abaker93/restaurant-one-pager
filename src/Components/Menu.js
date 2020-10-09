@@ -88,7 +88,7 @@ const pizzaUL = document.createElement('ul');
 byTheSlice.forEach(slice => {
 	const li = document.createElement('li');
 	li.innerHTML =
-		`<img src="../src/img/${slice.img}" />
+		`<img src="${slice.img}" />
 		<h4>${slice.name}</h4>
 		<span>${slice.price}</span>
 		<p>${slice.description}</p>`;
@@ -98,7 +98,7 @@ byTheSlice.forEach(slice => {
 wholePizza.forEach(pizza => {
 	const li = document.createElement('li');
 	li.innerHTML =
-		`<img src="../src/img/${pizza.img}" />
+		`<img src="${pizza.img}" />
 		<h4>${pizza.name}</h4>
 		<span>${pizza.price}</span>
 		<p>${pizza.description}</p>`;
@@ -106,14 +106,9 @@ wholePizza.forEach(pizza => {
 })
 
 menu.append(container);
-container.append(header);
+container.append(header, byTheSliceList, wholePizzaList);
 header.append(h2, subheader);
-container.append(byTheSliceList, wholePizzaList);
-byTheSliceList.append(sliceH3);
-byTheSliceList.append(sliceP);
-byTheSliceList.append(sliceUL);
-wholePizzaList.append(pizzaH3);
-wholePizzaList.append(pizzaP);
-wholePizzaList.append(pizzaUL);
+byTheSliceList.append(sliceH3, sliceP, sliceUL);
+wholePizzaList.append(pizzaH3, pizzaP, pizzaUL);
 
 export { menu };

@@ -32,7 +32,7 @@ left.innerHTML =
 
 const right = document.createElement('div');
 right.innerHTML =
-    `<img src="../src/img/map.png" />`;
+    `<img src="map.png" />`;
 
 contact.append(container);
 container.append(header, left, right);
