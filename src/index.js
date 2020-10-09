@@ -10,10 +10,10 @@ const AppConstructor = (() => {
 	const App = document.getElementById('App');
 
 	App.append(nav);
-	App.append(head);
-	App.append(home);
-	App.append(menu);
-	App.append(footer);
+			App.append(head);
+			App.append(home);
+			App.append(menu);
+			App.append(footer);
 
 	const menuItems = Array.from(document.getElementsByClassName('nav-item'));
 	let activeNav = menuItems[0];
@@ -37,6 +37,7 @@ const AppConstructor = (() => {
 			App.append(nav);
 			App.append(head);
 			App.append(home);
+			// App.append(menu);
 			App.append(footer);
 		} else if (activeNav.id == 1) {
 			App.append(nav);

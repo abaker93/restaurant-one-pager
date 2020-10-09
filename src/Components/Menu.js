@@ -1,5 +1,8 @@
-const menu = document.createElement('main');
+const menu = document.createElement('section');
 menu.setAttribute('id', 'menu');
+
+const container = document.createElement('div');
+container.setAttribute('class', 'container');
 
 const header = document.createElement('header');
 
@@ -12,25 +15,25 @@ subheader.innerText = 'Feeling Peckish?';
 
 const byTheSlice = [
 	{
-		img: '../img/footer.jpg',
+		img: 'footer.jpg',
 		name: 'Basic Pizza',
 		description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
 		price: 7.25
 	},
 	{
-		img: '../img/footer.jpg',
+		img: 'footer.jpg',
 		name: 'Basic Pizza',
 		description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
 		price: 7.50
 	},
 	{
-		img: '../img/footer.jpg',
+		img: 'footer.jpg',
 		name: 'Basic Pizza',
 		description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
 		price: 4.50
 	},
 	{
-		img: '../img/footer.jpg',
+		img: 'footer.jpg',
 		name: 'Basic Pizza',
 		description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
 		price: 7.50
@@ -39,25 +42,25 @@ const byTheSlice = [
 
 const wholePizza = [
 	{
-		img: '../img/footer.jpg',
+		img: 'footer.jpg',
 		name: 'Fancy Pizza',
 		description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
 		price: 17.25
 	},
 	{
-		img: '../img/footer.jpg',
+		img: 'footer.jpg',
 		name: 'Fancy Pizza',
 		description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
 		price: 17.25
 	},
 	{
-		img: '../img/footer.jpg',
+		img: 'footer.jpg',
 		name: 'Fancy Pizza',
 		description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
 		price: 17.25
 	},
 	{
-		img: '../img/footer.jpg',
+		img: 'footer.jpg',
 		name: 'Fancy Pizza',
 		description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
 		price: 17.25
@@ -80,24 +83,37 @@ const pizzaP = document.createElement('p');
 pizzaP.innerText = 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.';
 
 const sliceUL = document.createElement('ul');
+const pizzaUL = document.createElement('ul');
 
 byTheSlice.forEach(slice => {
 	const li = document.createElement('li');
 	li.innerHTML =
-		`<img src="${slice.img}" />
+		`<img src="../src/img/${slice.img}" />
 		<h4>${slice.name}</h4>
 		<span>${slice.price}</span>
 		<p>${slice.description}</p>`;
-	ul.append(li);
+	sliceUL.append(li);
 })
 
-menu.append(header);
-header.append(h2);
-menu.append(byTheSliceList);
-// byTheSliceList.append(sliceH3);
-// byTheSliceList.append(sliceP);
-// byTheSliceList.append(sliceUL);
-// wholePizzaList.append(pizzaH3);
-// wholePizzaList.append(pizzaP);
+wholePizza.forEach(pizza => {
+	const li = document.createElement('li');
+	li.innerHTML =
+		`<img src="../src/img/${pizza.img}" />
+		<h4>${pizza.name}</h4>
+		<span>${pizza.price}</span>
+		<p>${pizza.description}</p>`;
+	pizzaUL.append(li);
+})
+
+menu.append(container);
+container.append(header);
+header.append(h2, subheader);
+container.append(byTheSliceList, wholePizzaList);
+byTheSliceList.append(sliceH3);
+byTheSliceList.append(sliceP);
+byTheSliceList.append(sliceUL);
+wholePizzaList.append(pizzaH3);
+wholePizzaList.append(pizzaP);
+wholePizzaList.append(pizzaUL);
 
 export { menu };

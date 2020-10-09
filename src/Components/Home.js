@@ -1,4 +1,4 @@
-const home = document.createElement('main');
+const home = document.createElement('section');
 home.setAttribute('id', 'about');
 
 const container = document.createElement('div');
