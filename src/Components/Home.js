@@ -1,4 +1,4 @@
-const main = document.createElement('main');
+const home = document.createElement('main');
 
 const about = document.createElement('section');
 about.setAttribute('id', 'about');
@@ -35,7 +35,7 @@ right.innerHTML =
         <button class="btn-dark">See the Menu!</button>
     </div>`
 
-main.append(about);
+home.append(about);
 about.append(container);
 container.append(header);
 header.append(h2);
@@ -45,4 +45,4 @@ left.append(photo1);
 left.append(photo2);
 container.append(right);
 
-export { main };
+export { home };

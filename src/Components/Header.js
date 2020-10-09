@@ -23,14 +23,14 @@ logo.innerHTML =
 	</svg>`;
 
 const menu = document.createElement('ul');
-for(let i=0; i<3; i++) {
+const menuText = ['Home', 'Menu', 'Contact'];
+menuText.forEach(text => {
 	const menuItem = document.createElement('li');
-	const menuText = ['Home', 'Menu', 'Contact'];
 	menuItem.setAttribute('class', 'nav-item');
-	menuItem.setAttribute('id', `nav-{i}`);
-	menuItem.innerText = menuText[i];
+	menuItem.setAttribute('id', menuText.indexOf(text));
+	menuItem.innerText = text;
 	menu.append(menuItem);
-}
+})
 
 const heroTitle = document.createElement('div');
 heroTitle.setAttribute('class', 'hero-title');
