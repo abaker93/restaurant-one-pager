@@ -1,13 +1,18 @@
 import './Style/Style.scss';
-import { header } from './Components/Header';
-import { home } from './Components/Home';
+import { head } from './Components/Head';
+import { subHead } from './Components/SubHead';
 import { footer } from './Components/Footer';
+import { nav } from './Components/Nav';
+import { home } from './Components/Home';
+import { menu } from './Components/Menu';
 
 const AppConstructor = (() => {
 	const App = document.getElementById('App');
 
-	App.append(header);
+	App.append(nav);
+	App.append(head);
 	App.append(home);
+	App.append(menu);
 	App.append(footer);
 
 	const menuItems = Array.from(document.getElementsByClassName('nav-item'));
@@ -20,25 +25,27 @@ const AppConstructor = (() => {
 			activeNav = menuItems[itemID];
 			menuItems.forEach(i => {
 				menuItems[menuItems.indexOf(i)].classList.remove('active');
-			})
+			}); 
 			activeNav.classList.add('active');
 			pageSwitch();
 		})
 	})
 
-	console.log(activeNav);
-
 	const pageSwitch = () => {
 		App.innerHTML = '';
 		if (activeNav.id == 0) {
-			App.append(header);
+			App.append(nav);
+			App.append(head);
 			App.append(home);
 			App.append(footer);
 		} else if (activeNav.id == 1) {
-			App.append(header);
+			App.append(nav);
+			App.append(subHead);
+			App.append(menu);
 			App.append(footer);
 		} else if (activeNav.id == 2) {
-			App.append(header);
+			App.append(nav);
+			App.append(subHead);
 			App.append(footer);
 		}
 	}

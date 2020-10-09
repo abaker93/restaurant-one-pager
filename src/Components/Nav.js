@@ -1,8 +1,5 @@
-const header = document.createElement('header');
-header.setAttribute('id', 'header');
-
-const mainNav = document.createElement('nav');
-mainNav.setAttribute('id', 'main-nav');
+const nav = document.createElement('nav');
+nav.setAttribute('id', 'main-nav');
 
 const container = document.createElement('div');
 container.setAttribute('class', 'container');
@@ -32,22 +29,8 @@ menuText.forEach(text => {
 	menu.append(menuItem);
 })
 
-const heroTitle = document.createElement('div');
-heroTitle.setAttribute('class', 'hero-title');
-
-const subheader = document.createElement('span');
-subheader.setAttribute('class', 'subheader');
-subheader.innerText = 'World class pizza';
-
-const h1 = document.createElement('h1');
-h1.innerText = 'Delivery, Takeout, or Dinein!';
-
-header.append(mainNav);
-mainNav.append(container);
+nav.append(container);
 container.append(logo);
 container.append(menu)
-header.append(heroTitle);
-heroTitle.append(subheader);
-heroTitle.append(h1);
 
-export { header };
+export { nav };

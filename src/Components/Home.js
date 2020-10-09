@@ -1,7 +1,5 @@
 const home = document.createElement('main');
-
-const about = document.createElement('section');
-about.setAttribute('id', 'about');
+home.setAttribute('id', 'about');
 
 const container = document.createElement('div');
 container.setAttribute('class', 'container');
@@ -35,8 +33,7 @@ right.innerHTML =
         <button class="btn-dark">See the Menu!</button>
     </div>`
 
-home.append(about);
-about.append(container);
+home.append(container);
 container.append(header);
 header.append(h2);
 header.append(subheader);

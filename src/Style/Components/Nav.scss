@@ -1,0 +1,36 @@
+nav {
+    @include arboria-book;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.70) 20%, rgba(0,0,0,0.25) 50%, rgba(0, 0, 0, 0) 100%);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    text-transform: uppercase;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo {
+        height: 50px;
+        fill: $white;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        
+        li {
+            border-top: 5px solid transparent;
+            padding: 30px;
+            color: $white;
+            
+            &.active { border-top-color: $yellow; }
+        
+        }
+        
+    }
+
+}
