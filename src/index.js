@@ -5,15 +5,15 @@ import { footer } from './Components/Footer';
 import { nav } from './Components/Nav';
 import { home } from './Components/Home';
 import { menu } from './Components/Menu';
+import { contact } from './Components/Contact';
 
 const AppConstructor = (() => {
 	const App = document.getElementById('App');
 
 	App.append(nav);
-			App.append(head);
-			App.append(home);
-			App.append(menu);
-			App.append(footer);
+	App.append(head);
+	App.append(home);
+	App.append(footer);
 
 	const menuItems = Array.from(document.getElementsByClassName('nav-item'));
 	let activeNav = menuItems[0];
@@ -37,7 +37,6 @@ const AppConstructor = (() => {
 			App.append(nav);
 			App.append(head);
 			App.append(home);
-			// App.append(menu);
 			App.append(footer);
 		} else if (activeNav.id == 1) {
 			App.append(nav);
@@ -47,6 +46,7 @@ const AppConstructor = (() => {
 		} else if (activeNav.id == 2) {
 			App.append(nav);
 			App.append(subHead);
+			App.append(contact);
 			App.append(footer);
 		}
 	}

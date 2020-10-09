@@ -1,0 +1,28 @@
+#contact {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    header {
+        grid-column: 1 / 3;
+        text-align: center;
+        padding-bottom: 100px;
+    }
+
+    ul li {
+        display: grid;
+        grid-template-columns: 25px 1fr;
+        grid-column-gap: 10px;
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: 20px;
+
+        &:last-child { align-items: start; }
+
+    }
+
+}
